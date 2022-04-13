@@ -29,6 +29,13 @@ public class ArrayStorage {
         return null;
     }
 
+    public void update(Resume resume)
+    {
+        for (int i=0; i<size; i++)
+            if (resume.getUuid().equals(storage[i].getUuid()))
+                storage[i] = resume;
+    }
+
     public void delete(String uuid) {
         for (int i = 0; i < size; i++)
             if (storage[i].getUuid().equals(uuid)) {
